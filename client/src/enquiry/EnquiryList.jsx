@@ -48,7 +48,7 @@ const EnquiryList = ({data,getEnquiry,Swal,setFormData}) => {
     <div className='sm:w-[90%] w-[98%] mt-10 bg-blue-900 '>
       <h2 className='text-3xl italic m-4 font-bold  text-center'>Enquiry List</h2>
 
-       <table className='text-[10px] sm:text-[18px] md:text-[20px] w-full md:w-[97%] lg:text-[24px] md:ml-[2vh]' >
+       <table className='text-[10px] sm:text-[18px] md:text-[20px] w-full sm:w-[97%] lg:text-[24px] md:ml-[2vh]' >
         <tr className=' bg-gray-600  ml-10'>
           <th className='text-start'>Sr. No.</th>
           <th className='text-start'>Name</th>
