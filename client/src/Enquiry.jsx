@@ -30,7 +30,7 @@ const Enquiry = () => {
     
      if(formData._id){
           
-         axios.put(`http://localhost:8020/api/enquiry/update/${formData._id}`,formData).then((res)=>{
+         axios.put(`https://user-enquiry-apii.vercel.app/api/enquiry/update/${formData._id}`,formData).then((res)=>{
        
         toast.success("enquiry update successfully")
         setFormData({
@@ -44,7 +44,7 @@ const Enquiry = () => {
     })
 
      }else{
-       axios.post(`http://localhost:8020/api/enquiry/insert`,formData).then((res)=>{
+       axios.post(`https://user-enquiry-apii.vercel.app/api/enquiry/insert`,formData).then((res)=>{
         console.log(res.data)
         toast.success("enquiry saved successfully")
         setFormData({
@@ -61,7 +61,7 @@ const Enquiry = () => {
   }
 
   let getEnquiry =()=>{  
-    axios.get(`http://localhost:8020/api/enquiry/view`).then((res)=>{
+    axios.get(`https://user-enquiry-apii.vercel.app/api/enquiry/view`).then((res)=>{
       return res.data
     }).then((finalData)=>{
         setEenquiryList(finalData.enquiryList)

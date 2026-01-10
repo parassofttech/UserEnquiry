@@ -19,7 +19,7 @@ const EnquiryList = ({data,getEnquiry,Swal,setFormData}) => {
   if (result.isConfirmed) {
   
 
-    axios.delete(`http://localhost:8020/api/enquiry/delete/${delId}`).then((res)=>{
+    axios.delete(`https://user-enquiry-apii.vercel.app/api/enquiry/delete/${delId}`).then((res)=>{
         toast.success("Enquiry deleted Successfully")
         getEnquiry()
        })
@@ -38,7 +38,7 @@ const EnquiryList = ({data,getEnquiry,Swal,setFormData}) => {
   }
 
   let editRow=(editId)=>{
-    axios.get(`http://localhost:8020/api/enquiry/single/${editId}`).then((res)=>{
+    axios.get(`https://user-enquiry-apii.vercel.app/api/enquiry/single/${editId}`).then((res)=>{
       let data =res.data
       setFormData(data.enquiry)
     })
