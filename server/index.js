@@ -23,7 +23,5 @@ app.use("/api/enquiry", enequiryRoutes)
 app.get("/", (req,res)=>{
     return res.send("backend is running")
 })
-app.listen(process.env.PORT, () => {
-  console.log("Server running on port");
-});
+
 module.exports= app
